@@ -55,7 +55,7 @@ Window  {
                     text: "Connect"
                     isAccent: true
                     onClicked: mainWindow.connectRequested(serversListView.currentIndex)
-                    enabled: serversListView.currentIndex !== -1
+                    enabled: serversListView.currentIndex !== -1 && serverScreen.state !== "connected"
                 }
             }
         }

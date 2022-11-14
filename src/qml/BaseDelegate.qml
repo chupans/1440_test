@@ -27,7 +27,7 @@ Rectangle {
     states: [
         State {
             name: "hovered"
-            when: root.hoverEnabled && !root._isSelected && mouseArea.containsMouse
+            when: root.hoverEnabled && (!root.selectable || !root._isSelected) && mouseArea.containsMouse
             PropertyChanges {
                 target: root
                 border.width: withBorder ? 5 : 0
